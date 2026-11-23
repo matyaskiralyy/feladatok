@@ -1,4 +1,6 @@
-﻿namespace Feladatok
+﻿using Collections;
+
+namespace Feladatok
 {
     internal class Program
     {
@@ -97,6 +99,47 @@
             foreach (var film in filmekp)
             {
                 Console.WriteLine(film);
+            }
+
+            Director jackson = new Director() { Name = "Jackson" };
+            Director kurosawa = new Director() { Name = "Kurosawa" };
+            Director scott = new Director() { Name = "Scott" };
+
+            Movie abc = new Movie() { Title = "abc", Length = 123, Directo = jackson };
+            Movie abcd = new Movie() { Title = "abcd", Length = 230, Directo = jackson };
+            Movie samurai = new Movie() { Title = "samurai", Length = 89, Directo = kurosawa };
+            Movie alien = new Movie() { Title = "alien", Length = 117, Directo = scott };
+            Movie runner = new Movie() { Title = "runner", Length = 117, Directo = scott };
+
+            List<Movie> movies = new List<Movie>() { abc, abcd, samurai, alien, runner };
+
+            foreach (var Movie in movies)
+            {
+                Console.WriteLine($"\n{Movie.Title}");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(movies.Count);
+
+            if (movies.Contains(samurai))
+                Console.WriteLine("van samurai");
+            else Console.WriteLine("nincs samurai");
+
+            foreach (var Movie in movies)
+            {
+                if(Movie.Title == "samurai")
+                {
+                    movies.Remove(Movie);
+                }
+                else
+                {
+                    Console.WriteLine("Nem samurai");
+                }
+            }
+
+            foreach (var Movie in movies)
+            {
+                Console.WriteLine($"\n{Movie.Title}");
             }
         }
     }

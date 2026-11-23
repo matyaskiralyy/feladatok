@@ -9,11 +9,11 @@ Director kurosawa = new Director() {Name = "Kurosawa"};
 Director scott = new Director() {Name = "Scott"};
 
 Hozz létre 5 filmet:
-Movie abc = new Movie() {Name = "abc", Length = 123, Directo = jackson};
-Movie abcd = new Movie() {Name = "abcd", Length = 230, Directo = jackson};
-Movie samurai = new Movie() {Name = "samurai", Length = 89, Directo = kurosawa};
-Movie alien = new Movie() {Name = "alien", Length = 117, Directo = scott};
-Movie runner = new Movie() {Name = "runner", Length = 117, Directo = scott};
+Movie abc = new Movie() {Title = "abc", Length = 123, Directo = jackson};
+Movie abcd = new Movie() {Title = "abcd", Length = 230, Directo = jackson};
+Movie samurai = new Movie() {Title = "samurai", Length = 89, Directo = kurosawa};
+Movie alien = new Movie() {Title = "alien", Length = 117, Directo = scott};
+Movie runner = new Movie() {Title = "runner", Length = 117, Directo = scott};
 
 Hozz létre egy 'Movies' listát, ami filmeket tartalmaz, és add hozzá az előbbi 5 filmet.
 

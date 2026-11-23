@@ -17,5 +17,9 @@ namespace Collections
          *      - Director Directo
          * 
          */
+        public string Title { get; set; }
+        public int Length { get; set; }
+        public Director Directo { get; set; }
+
     }
 }
