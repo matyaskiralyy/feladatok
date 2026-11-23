@@ -1,0 +1,103 @@
+namespace Feladatok
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /* 1. Filmek hosszát tároló lista
+             * - hozz létre egy filmek hosszát (percben) tároló listát az alábbi film hosszakkal:
+             *      89, 125, 215, 102, 378, 101, 101, 86, 97, 187
+             * - írd ki konzolra az összes filmhosszat a listából
+             */
+
+            List<int> filmekp = new List<int>(10);
+            filmekp.Add(89);
+            filmekp.Add(125);
+            filmekp.Add(215);
+            filmekp.Add(102);
+            filmekp.Add(378);
+            filmekp.Add(101);
+            filmekp.Add(101);
+            filmekp.Add(86);
+            filmekp.Add(97);
+            filmekp.Add(187);
+
+            Console.WriteLine($"Lista elemei");
+            foreach (int i in filmekp)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            //2. írd ki, hogy hány 'film' van a lsitában
+            int filmossz = 0;
+            foreach (int i in filmekp)
+            {
+                filmossz++;
+            }
+            Console.WriteLine($"\n{filmossz}");
+                
+
+            //3. írd ki, hogy van-e 101 hosszú film a listában
+
+            foreach(int i in filmekp)
+            {
+                if(i == 101)
+                {
+                    Console.WriteLine("\nvan");
+                }
+                else
+                {
+                    Console.WriteLine("\nnincs");
+                }
+            }
+
+            //4. töröld ki a 101 hosszú filmet a listából és ezután írd ki újra a lista tartalmát és hogy jelenleg hány film van a listában
+
+            filmekp.Remove(101);
+            Console.WriteLine(filmekp.Count);
+
+            //5. illeszd be a 2. helyre a '123' számot
+
+            filmekp.Insert(1, 123);
+
+            //6. keresd meg a '123' hosszú film indexét a listában és irasd ki a konzolra
+
+            int index = filmekp.IndexOf(123);
+            Console.WriteLine(index);
+
+            //7. amit a 6-os feladatban kaptál indexet: töröld ki a számot ezen az indexen
+
+            filmekp.RemoveAt(index);
+
+            //8. irasd ki a listában lévő elemeket
+
+            foreach (var film in filmekp)
+            {
+                Console.WriteLine(film);
+            }
+
+
+            Console.WriteLine();
+            //9. fordítsd meg a listában lévő elemek sorrendjét és írasd ki a konzolra újra a lista elemeit
+
+            filmekp.Reverse();
+
+            foreach (var film in filmekp)
+            {
+                Console.WriteLine(film);
+            }
+
+            Console.WriteLine();
+
+            //10. rendezd növekvő sorrendbe a lsta elemeit, és írd ki őkat a konzolra
+
+            filmekp.Sort();
+
+            foreach (var film in filmekp)
+            {
+                Console.WriteLine(film);
+            }
+        }
+    }
+}
